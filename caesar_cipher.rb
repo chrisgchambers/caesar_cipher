@@ -1,5 +1,4 @@
 require 'sinatra'
-require 'sinatra/reloader'
 
 get '/' do
   plain_text = params["plain_text"]
