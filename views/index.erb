@@ -12,20 +12,20 @@
   </head>
   <body>
     <div class="center jumbotron">
-      <h1>Caesar Cipher Encoder</h1>
-      <h2>The caesar cipher is a simple code wherein letters and numbers are shifted by a number known to both parties. Create your own caesar cipher encrypted message using the form below!</h2>
+      <h1>Caesar Cipher Encryption</h1>
+      <h2>The caesar cipher is a simple code wherein letters and numbers are shifted by a number of characters known to both parties. Create your own caesar cipher encrypted message using the form below!</h2>
     </div>
     <div class='container'>
       <form>
         <div class="form-group">
           <label for="plain_text">Message</label>
-          <textarea type='text' class="form-control" id='plain_text' name='plain_text' placeholder='Enter the text to encode here'><%= plain_text %></textarea>
+          <textarea type='text' class="form-control" id='plain_text' name='plain_text' placeholder='Enter the text to encrypt here'><%= plain_text %></textarea>
         </div>
         <div class="form-group">
           <label for="shift_by">Number</label>
           <input type='number' class="form-control" id='shift_by' min='1' max='25'  value ='5' name='shift_by' />
         </div>
-        <input type='submit' value='Encrypt!' class='btn btn-primary'/>
+        <input type='submit' value='Encrypt' class='form-control btn btn-success'/>
       </form>
       <textarea class="form-control"><%= code_output %></textarea>
     </div>
