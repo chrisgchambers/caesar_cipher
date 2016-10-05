@@ -31,7 +31,7 @@
         </div>
         <div class="form-group">
           <label for="shift_by">Number</label>
-          <input type='number' class="form-control" id='shift_by' min='1' max='25'  value ='5' name='shift_by' />
+          <input type='number' class="form-control" id='shift_by' min='1' max='25'  value ='<%= shift_by || 5%>' name='shift_by' />
         </div>
         <input type='submit' value='Encrypt' class='form-control btn btn-success'/>
       </form>
