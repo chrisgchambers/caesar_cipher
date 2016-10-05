@@ -1,6 +1,14 @@
 require 'sinatra'
-
+require 'sinatra/reloader' if development?
 get '/' do
+  erb :index, :locals =>  {
+    :code_output => nil,
+    :shift_by => nil,
+    :plain_text => nil
+  }
+end
+
+post '/' do
   plain_text = params["plain_text"]
   shift_by = params["shift_by"].to_i
   code_output = plain_text ? caesar_cipher(plain_text, shift_by) : ''
@@ -9,6 +17,7 @@ get '/' do
                             :plain_text => plain_text
                           }
 end
+
 
 
 def caesar_cipher(unencoded='', shift_by = 1)
